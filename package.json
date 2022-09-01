@@ -11,9 +11,12 @@
   "dependencies": {
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"
   }
