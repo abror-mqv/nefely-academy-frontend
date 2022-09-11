@@ -13,7 +13,8 @@ const TextStyle = styled.h2`
   height: 100vh;
   text-orientation: upright;
   margin: 40px 0 0 40px;
-  position: fixed;
+  position: absolute;
+  top: 0;
 `;
 function SideLineText() {
   return <TextStyle>Курсы по ремонту телефонов</TextStyle>;

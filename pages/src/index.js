@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import Header from './components/Header/Header'
-import SideLineText from './components/SideLineText/SideLineText'
+
+import Header from "./components/Header/Header";
+import SideLineText from "./components/SideLineText/SideLineText";
+import Hero from "./components/Hero/Hero";
 
 function Index() {
   return (
     <main>
-        
-        <SideLineText/>
-        <Header/>
+      <SideLineText />
+      <Header />
+      <Hero/>
     </main>
-  )
+  );
 }
 
-export default Index
+export default Index;
