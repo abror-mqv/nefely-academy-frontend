@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.6",
+    "formik": "^2.2.9",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "^18.2.0",
     "styled-components": "^5.3.5",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",

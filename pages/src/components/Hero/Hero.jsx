@@ -9,6 +9,8 @@ import { Mousewheel, Pagination } from "swiper";
 
 import HomePage from "./Blocks/HomePage";
 import Courses from "./Blocks/Courses/Courses";
+import WhyWe from './Blocks/WhyWe/WhyWe'
+import Contact from "./Blocks/Contact/Contact";
 
 const Main = styled.div`
   width: 82vw;
@@ -37,10 +39,14 @@ function Hero() {
         <SwiperSlide>
           <Courses />
         </SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>
+          <WhyWe/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Contact/>
+        </SwiperSlide>
+        <SwiperSlide>Footer</SwiperSlide>
+      
       </Swiper>
     </Main>
   );

@@ -6,7 +6,7 @@ import Link from "./Link";
 
 const HeaderStyle = styled.header`
   @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
-  width: 52vw ;
+  width: 52vw;
   height: 50px;
   /* position: absolute; */
   margin: 48px 0 0 140px;
@@ -15,15 +15,15 @@ const HeaderStyle = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.4vw;
   line-height: 31px;
   padding: 0 32px 0 32px;
   div {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,6 @@ const HeaderStyle = styled.header`
       width: 10px;
       height: 10px;
     }
-   
   }
 `;
 
@@ -43,7 +42,7 @@ function Header() {
   return (
     <HeaderStyle>
       <div>
-       <Link>Курсы</Link>
+        <Link>Курсы</Link>
         <div></div>
         <Link>Методика</Link>
         <div></div>

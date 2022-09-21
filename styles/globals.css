@@ -22,6 +22,7 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 .swiper {
@@ -30,29 +31,82 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-  background: linear-gradient(131.19deg, #f7fc00 14.67%, #d3fc00 90%) !important;
+  background: linear-gradient(
+    131.19deg,
+    #f7fc00 14.67%,
+    #d3fc00 90%
+  ) !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 7px -1px #d3fc00,
     inset -2px -2px 5px -2px #000000;
   border-radius: 19px;
   width: 50px !important;
   height: 50px !important;
   margin-top: 10px !important;
-
 }
-.swiper-pagination-bullet{
-  background: linear-gradient(131.19deg, #f7fc00 14.67%, #d3fc00 90%) !important;
+.swiper-pagination-bullet {
+  background: linear-gradient(
+    131.19deg,
+    #f7fc00 14.67%,
+    #d3fc00 90%
+  ) !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 7px -1px #d3fc00,
     inset -2px -2px 5px -2px #000000;
   border-radius: 19px;
   width: 14px !important;
   height: 14px !important;
   margin-top: 10px !important;
-  
-  
 }
 
-.swiper-pagination-vertical{
+.swiper-pagination-vertical {
   position: fixed !important;
   margin-right: 50px;
+}
 
+.swiper-button-next,
+.swiper-button-prev {
+  top: 87% !important;
+  color: #d3fc00 !important;
+  width: 10vh !important;
+  height: 12vh !important;
+}
+.swiper-button-prev {
+  left: -10px !important;
+}
+
+.swiper-button-next {
+  right: -10px !important;
+}
+
+.MuiFormLabel-root {
+  color: rgba(255, 255, 255, 0.564) !important;
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1мц;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.MuiInputBase-inputMultiline::before {
+  border-bottom: 1px solid #d3fc00 !important;
+}
+.css-66dh3a-MuiInputBase-input-MuiInput-input {
+  border-bottom: 1px solid #d3fc00 !important;
+}
+.css-8q2m5j-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 1px solid #d3fc00;
+}
+.css-66dh3a-MuiInputBase-input-MuiInput-input{
+  color: #ffffff;
+}
+
+
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root:before{
+  border-bottom: 1px solid #d3fc00;
+}
+
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root:after{
+  border-bottom: 2px solid #ffffff;
 }
