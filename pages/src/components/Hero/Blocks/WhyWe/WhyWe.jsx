@@ -12,7 +12,6 @@ import Three from "./Slides/3Three/Three";
 import Four from "./Slides/4Four/Four";
 import Five from "./Slides/5Five/Five";
 
-
 const WhyWeStyled = styled.article`
   display: flex;
   justify-content: space-around;
@@ -99,7 +98,9 @@ function WhyWe() {
       <div className="Why">
         <h5>Почему мы?</h5>
         <div className="Container">
-          <a href="https://www.pinterest.com/" className="Gallery">Галерея</a> 
+          <a href="https://www.pinterest.com/" className="Gallery">
+            Галерея
+          </a>
           <Swiper
             navigation={true}
             modules={[Navigation, Autoplay]}
@@ -110,11 +111,10 @@ function WhyWe() {
             className="mySwiper"
           >
             <SwiperSlide>
-            
               <Two />
             </SwiperSlide>
             <SwiperSlide>
-            <One />
+              <One />
             </SwiperSlide>
             <SwiperSlide>
               <Three />

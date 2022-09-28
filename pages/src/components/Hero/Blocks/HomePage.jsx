@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Bolts from "./Bolts/Bolts";
 
+import SlideNextButton from "./SwipeCoursesButton";
+
 const HomeStyle = styled.article`
   display: flex;
   justify-content: space-between;
@@ -86,6 +88,9 @@ const HomeStyle = styled.article`
         /* transform: scale(102%); */
         width: 86%;
       }
+      button:active{
+        transform: scale(90%);
+      }
       h4 {
         font-family: "Jura";
         font-style: normal;
@@ -141,7 +146,7 @@ function HomePage() {
           <p>0 999 344 955</p>
           <div className="Line"></div>
           <p style={{ marginTop: 0 }}>0 554 220 812</p>
-          <button>посмотреть курсы</button>
+          <SlideNextButton/>
         </div>
       </div>
       <img className="Plate" src="/media/phone1.png" alt="" />

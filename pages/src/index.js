@@ -9,7 +9,6 @@ function Index() {
   return (
     <main>
       <SideLineText />
-      <Header />
       <Hero/>
     </main>
   );

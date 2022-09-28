@@ -12,16 +12,13 @@ import "swiper/css/pagination";
 
 import Bolts from "../Bolts/Bolts";
 
-
 import Card from "./Card";
 const CoursesStyled = styled.article`
-  display: flex;
-  justify-content: flex-start;
+ 
   width: 100%;
   height: 100%;
   color: #000000;
-  flex-direction: column;
-  align-items: center;
+  display: block;
   .swiper-pagination-vertical {
     background-color: #d3fc00;
   }
@@ -54,7 +51,7 @@ const CoursesStyled = styled.article`
     box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #000000;
     border-radius: 19px;
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     .mySwiper {
       padding: 0% 7%;
@@ -71,7 +68,6 @@ const CoursesStyled = styled.article`
       }
     }
     .swiper-slide {
-     
     }
   }
 `;
@@ -85,23 +81,25 @@ function Courses() {
       <h2>Направления Обучения</h2>
       <h4>Профессии и курсы, на которые сейчас открыт набор</h4>
       <div className="Main">
-        <Bolts style={{marginTop: "0"}}/>
-        <Swiper slidesPerView={3} spaceBetween={"8%"} className="mySwiper">
+        <Swiper slidesPerView={3} spaceBetween={"0%"} className="mySwiper">
           <div></div>
           <div className="Buttons">
             <SwiperButtonPrev />
             <SwiperButtonNext />
           </div>
 
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
         </Swiper>
       </div>
     </CoursesStyled>

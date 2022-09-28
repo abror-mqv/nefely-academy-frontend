@@ -108,13 +108,13 @@ function Card() {
     <StyledCard>
       <div className="header">
         <h3 className="WhiteH">Курс</h3>
-        <h3 className="YellowH">"Начинающий"</h3>
+        <h3 className="YellowH">Начинающий</h3>
       </div>
       <div className="Card">
         <div className="Image"></div>
         <p className="CardParag">
-          <span>48</span> часов практики Выдача сертификатов после{" "}
-          <span>48</span> часов Обучение с <span>0</span> до{" "}
+          <span>48</span> часов практики Выдача сертификатов после
+          <span>48</span> часов Обучение с <span>0</span> до
           <span>МАСТЕРА</span>
         </p>
         <div className="Price">
