@@ -6,10 +6,17 @@ import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Box from "@mui/material/Box";
+import SendIcon from "@mui/icons-material/Send";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import CallIcon from "@mui/icons-material/Call";
 
 import { render } from "react-dom";
-import { Formik } from "formik";
+import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
+
+import FieldName from "./Field/FieldName";
+import FieldTel from "./Field/FieldTel";
+import Bolts from "../Bolts/Bolts";
 
 const StyledContact = styled.div`
   width: 100%;
@@ -35,7 +42,6 @@ const StyledContact = styled.div`
       justify-content: flex-start;
       align-items: flex-start;
       gap: 2.5vw;
-      
     }
     .Write {
       display: flex;
@@ -59,6 +65,35 @@ const StyledContact = styled.div`
       }
       .WithIcon {
         display: flex;
+      }
+      button {
+        width: 120%;
+        margin-left: -20%;
+        background: linear-gradient(273.14deg, #d3fc00 27.24%, #fcf200 103.71%);
+        box-shadow: 6px 6px 12px #000000,
+          -3px -3px 14px -3px rgba(255, 255, 255, 0.66);
+        border-radius: 6px;
+        font-family: "Days One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: start;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: #010101;
+        margin-top: 4vh;
+        padding: 1vh;
+        transition: 0.3s;
+        gap: 1.3vh;
+        cursor: pointer;
+      }
+      button:hover {
+        transform: scale(100%);
+        padding-left: 30%;
+        box-shadow: 6px 6px 12px #000000,
+          -3px -3px 20px -3px rgba(255, 255, 255, 0.803);
       }
     }
     .Contacts {
@@ -137,87 +172,20 @@ function Contact() {
         <div className="Container">
           <div className="Write">
             <h5>Мы позвоним</h5>
-            <Box sx={{ display: "flex", alignItems: "flex-end", gap: "1vw" }}>
-              <AccountCircle sx={{ color: "#d3fc00" }} />
-              <TextField
-                id="standard-textarea"
-                label="Ваше имя"
-                placeholder="Введите имя"
-                type="tel"
-                variant="standard"
-                multiline
-              />
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "flex-end", gap: "1vw" }}>
-              <WhatsAppIcon sx={{ color: "#d3fc00" }} />
-              <TextField
-                id="standard-textarea"
-                label="Ваш номер"
-                placeholder="Введите номер"
-                variant="standard"
-                type="tel"
-                multiline
-              />
-            </Box>
-
             <Formik
-              initialValues={{ firstName: "" }}
+              initialValues={{ name: "", email: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
                 alert(JSON.stringify(values, null, 2));
               }}
-              validationSchema={Yup.object().shape({
-                email: Yup.string().max(30).required("Required"),
-              })}
             >
-              {(props) => {
-                const {
-                  values,
-                  touched,
-                  errors,
-                  dirty,
-                  isSubmitting,
-                  handleChange,
-                  handleBlur,
-                  handleSubmit,
-                  handleReset,
-                } = props;
-                return (
-                  <form onSubmit={handleSubmit}>
-                    <label htmlFor="firstName" style={{ display: "block" }}>
-                      Имя
-                    </label>
-                    <input
-                      id="firstName"
-                      placeholder="Ваше имя"
-                      type="text"
-                      value={values.email}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className={
-                        errors.email && touched.email
-                          ? "text-input error"
-                          : "text-input"
-                      }
-                    />
-                    {errors.firstName && touched.firstName && (
-                      <div className="input-feedback">{errors.firstName}</div>
-                    )}
-
-                    <button
-                      type="button"
-                      className="outline"
-                      onClick={handleReset}
-                      disabled={!dirty || isSubmitting}
-                    >
-                      Reset
-                    </button>
-                    <button type="submit" disabled={isSubmitting}>
-                      Submit
-                    </button>
-                  </form>
-                );
-              }}
+              <Form>
+                <Field as={FieldName} name="name" type="text" />
+                <Field as={FieldTel} name="email" type="tel" />
+                <button type="submit">
+                  Отправить <SendIcon />
+                </button>
+              </Form>
             </Formik>
           </div>
           <div className="Contacts">
@@ -238,12 +206,12 @@ function Contact() {
                 />
               </a>
               <a href="#" className="MicroButton">
-                <WhatsAppIcon
+                <CallIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
               </a>
               <a href="#" className="MicroButton">
-                <WhatsAppIcon
+                <InstagramIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
               </a>

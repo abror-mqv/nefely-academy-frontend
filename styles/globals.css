@@ -98,15 +98,21 @@ a {
 .css-8q2m5j-MuiInputBase-root-MuiInput-root::after {
   border-bottom: 1px solid #d3fc00;
 }
-.css-66dh3a-MuiInputBase-input-MuiInput-input{
+.css-66dh3a-MuiInputBase-input-MuiInput-input {
   color: #ffffff;
 }
 
-
-.css-1ptx2yq-MuiInputBase-root-MuiInput-root:before{
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root:before {
   border-bottom: 1px solid #d3fc00;
 }
 
-.css-1ptx2yq-MuiInputBase-root-MuiInput-root:after{
-  border-bottom: 2px solid #ffffff;
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 3px solid #d3fc00;
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  color: #fff !important;
+}
+
+#courses {
+  transition: 0.3s;
 }

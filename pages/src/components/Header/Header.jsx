@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeaderBorder from "./header_border.svg";
 import Image from "next/image";
-import Link from "./Link";
+import Link from "next/link";
 
 const HeaderStyle = styled.header`
   @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
@@ -35,22 +35,30 @@ const HeaderStyle = styled.header`
       width: 10px;
       height: 10px;
     }
+    a {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-family: "Days One";
+      color: #ffffff;
+      text-shadow: 0px 0px 63px #d3fc00;
+    }
   }
 `;
 
 function Header() {
-  return (
+  return (  
     <HeaderStyle>
       <div>
-        <Link>Курсы</Link>
+        <a href="#"  onTouchStart={() => slideNext()     }>Курсы</a>
         <div></div>
-        <Link>Методика</Link>
+        <a href="#">Методика</a>
         <div></div>
-        <Link>Цены</Link>
+        <a href="#">Цены</a>
         <div></div>
-        <Link>Галерея</Link>
+        <a herf="#">Галерея</a>
         <div></div>
-        <Link>Ремонт</Link>
+        <a href="#">Ремонт</a>
       </div>
     </HeaderStyle>
   );

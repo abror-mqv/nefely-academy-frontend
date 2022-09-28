@@ -10,6 +10,8 @@ import { FreeMode, Navigation, Pagination } from "swiper";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
+import Bolts from "../Bolts/Bolts";
+
 
 import Card from "./Card";
 const CoursesStyled = styled.article`
@@ -83,6 +85,7 @@ function Courses() {
       <h2>Направления Обучения</h2>
       <h4>Профессии и курсы, на которые сейчас открыт набор</h4>
       <div className="Main">
+        <Bolts style={{marginTop: "0"}}/>
         <Swiper slidesPerView={3} spaceBetween={"8%"} className="mySwiper">
           <div></div>
           <div className="Buttons">

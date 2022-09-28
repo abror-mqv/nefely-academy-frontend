@@ -110,10 +110,11 @@ function WhyWe() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <One />
+            
+              <Two />
             </SwiperSlide>
             <SwiperSlide>
-              <Two />
+            <One />
             </SwiperSlide>
             <SwiperSlide>
               <Three />
