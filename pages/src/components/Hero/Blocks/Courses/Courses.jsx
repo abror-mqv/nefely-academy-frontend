@@ -10,8 +10,6 @@ import { FreeMode, Navigation, Pagination } from "swiper";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import Bolts from "../Bolts/Bolts";
-
 import Card from "./Card";
 const CoursesStyled = styled.article`
   width: 100%;
@@ -55,7 +53,7 @@ const CoursesStyled = styled.article`
     width: 96%;
     height: -webkit-fill-available;
     margin-top: 3vh;
-
+    overflow: hidden;
     .mySwiper {
       padding: 0% 7%;
       overflow: visible;
@@ -78,11 +76,19 @@ const CoursesStyled = styled.article`
 import SwiperButtonNext from "./SwiperNextButton";
 import SwiperButtonPrev from "./SwiperPrevButton";
 
-function Courses() {
+function Courses(props) {
+  const setIM = props.isc;
+  console.log("State1: ", props.isstate);
   return (
     <CoursesStyled>
       <header>
-        <h3>Направления обучения</h3>
+        <h3
+          onClick={() => {
+            setIM(true);
+          }}
+        >
+          Направления обучения
+        </h3>
         <h4>Профессии и курсы, на которые сейчас открыт набор</h4>
       </header>
       <div className="Main">
@@ -90,10 +96,8 @@ function Courses() {
           slidesPerView={2}
           spaceBetween={"0%"}
           className="mySwiper"
-
           mousewheel
         >
-          <div></div>
           <div className="Buttons">
             <SwiperButtonPrev />
             <SwiperButtonNext />
@@ -107,7 +111,8 @@ function Courses() {
 Выдача сертификатов
 после 48 часов
 Обучение с 0 до МАСТЕРА"
-              price="12000"
+              btn={props.SldN}
+              isc={setIM}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -119,7 +124,7 @@ function Courses() {
 после 72 часов
 Обучение с 0 до МАСТЕРА
 Помогаем открыть свою точку"
-              price="18000"
+              isc={setIM}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -130,7 +135,7 @@ function Courses() {
 Выдача сертификатов
 после 48 часов
 Обучение с 0 до МАСТЕРА"
-              price="12000"
+              isc={setIM}
             />
           </SwiperSlide>
         </Swiper>

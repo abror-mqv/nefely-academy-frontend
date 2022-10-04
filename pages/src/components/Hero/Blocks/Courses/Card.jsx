@@ -2,9 +2,14 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Join from "./add-friend.png";
+
 import Price from "./Price.svg";
 
 const StyledCard = styled.div`
+  * {
+    transition: 0.2s;
+  }
   text-align: center;
   height: 56vh;
 
@@ -12,7 +17,7 @@ const StyledCard = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-
+  gap: 3%;
   .WhiteH {
     font-family: "Days One";
     font-style: normal;
@@ -28,13 +33,13 @@ const StyledCard = styled.div`
     font-size: 24px;
     text-align: center;
     color: #d6fb01;
-    margin-top: -7%;
+    margin-top: -1%;
   }
 
   .Card {
     .Image {
       width: 100%;
-      height: 33%;
+      height: 40%;
       background-image: url("/media/CoursePicture.png");
     }
     transition: 0.2s;
@@ -51,20 +56,21 @@ const StyledCard = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow: hidden;
     .CardParag {
       font-family: "Jura";
       font-style: normal;
       font-weight: 700;
       font-size: 90%;
-      line-height: 21px;
+      line-height: 17px;
       text-align: center;
       height: 34%;
       display: flex;
       justify-content: center;
       align-items: center;
       color: rgba(255, 255, 255, 0.79);
+      padding: 6%;
       span {
         font-family: "Days One";
         font-style: normal;
@@ -81,45 +87,46 @@ const StyledCard = styled.div`
       box-shadow: 6px 6px 12px #000000, -3px -3px 14px rgba(255, 255, 255, 0.66);
       border-radius: 6px;
       width: 100%;
-      height: 33%;
-      padding: 2%;
-      .BlackLine {
-        width: 100%;
-        height: 2px;
-        background-color: #000000;
-      }
+      height: 17%;
+
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       div {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        p {
-          font-family: "Jura";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 160%;
-          line-height: 80%;
-          width: 80%;
-          color: #010101;
-          span {
-            font-size: 70%;
-          }
+        justify-content: center;
+        align-items: center;
+        font-size: 140%;
+        transition: 0.2s;
+        gap: 5%;
+        img {
+          width: 12%;
+          transform: 0.2s;
+        }
+        transition: 0.2s;
+      }
+      div:hover {
+        img {
+          transition: 0.2s;
+          /* transform: scale(120%); */
         }
       }
-      button {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
+    }
+    .Price:hover {
+      height: 24% !important;
     }
   }
 
   .Card:hover {
     box-shadow: 6px 6px 12px #000000, -3px -3px 14px -3px rgb(255, 255, 255);
     cursor: pointer;
+    transform: scale(102%);
   }
 `;
-function Card(props) {  
+function Card(props) {
+  const GoSlide = props.isc
+
   return (
     <StyledCard>
       <div className="header">
@@ -130,14 +137,12 @@ function Card(props) {
         <div className="Image"></div>
         <p className="CardParag">{props.description}</p>
         <div className="Price">
-          <div>
-            <p>{props.price} сом</p>
-            <div className="BlackLine"></div>
-            <p>
-              {props.price / 2} <span>в месяц рассрочка на 2 месяца</span>
-            </p>
+          {/* <SlideButton/> */}
+          <div onClick={() => {
+              GoSlide(true)
+          }}>
+            Записаться <img src={Join.src} alt="" />
           </div>
-          <button>Записаться</button>
         </div>
       </div>
     </StyledCard>

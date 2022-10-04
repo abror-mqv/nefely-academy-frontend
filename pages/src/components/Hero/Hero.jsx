@@ -18,6 +18,7 @@ import HomePage from "./Blocks/HomePage";
 import Courses from "./Blocks/Courses/Courses";
 import WhyWe from "./Blocks/WhyWe/WhyWe";
 import Contact from "./Blocks/Contact/Contact";
+import SldNxt from "./SldNxt";
 
 const Main = styled.div`
   width: 82vw;
@@ -64,9 +65,10 @@ const Main = styled.div`
       color: #d3fc00 !important;
       text-shadow: 0px 0px 63px #d3fc00;
     }
-   .WhiteLink:active, .YellowLink:active{
-      transform: scale(80%)
-   }
+    .WhiteLink:active,
+    .YellowLink:active {
+      transform: scale(80%);
+    }
   }
 `;
 
@@ -76,6 +78,9 @@ function Hero() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [controlledSwiper, setControlledSwiper] = useState(null);
   const [currentSlide, setCutterntSlide] = useState(1);
+
+  const [isC, setIsC] = useState(false);
+  const inputRef = React.useRef(null);
 
   const headerLinks = [
     <SwiperSlide
@@ -87,6 +92,7 @@ function Hero() {
     <SwiperSlide
       className={currentSlide != 1 ? "WhiteLink" : "YellowLink"}
       key={2}
+      // button={}
     >
       Курсы
     </SwiperSlide>,
@@ -142,11 +148,14 @@ function Hero() {
         }}
         onReachEnd={() => console.log("reach end")}
       >
-        <SwiperSlide id="home">
+        <SwiperSlide
+          id="home"
+        >
           <HomePage />
+          <SldNxt stute={isC} setst={setIsC}/>
         </SwiperSlide>
         <SwiperSlide id="courses">
-          <Courses />
+          <Courses isc={setIsC} isstate={isC}  />
         </SwiperSlide>
         <SwiperSlide id="whywe">
           <WhyWe />
