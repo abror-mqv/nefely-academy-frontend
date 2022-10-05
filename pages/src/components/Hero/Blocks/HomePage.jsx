@@ -27,6 +27,16 @@ const HomeStyle = styled.article`
       text-align: center;
       color: #d3fc00;
     }
+    h5{
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      justify-items: auto;
+      break-inside: avoid;
+      width: auto;
+      overflow-x: auto;
+      line-break: auto;
+    }
     .MainDiv {
       background: rgba(116, 116, 116, 0.1);
       box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #000000;
@@ -133,6 +143,7 @@ function HomePage() {
     <HomeStyle>
       <div>
         <h2>NEFELY ACADEMY</h2>
+        <h5>Обучение с нуля до мастера</h5>
         <div className="MainDiv">
           <Bolts />
           <h1>Курсы по ремонту телефонов</h1>

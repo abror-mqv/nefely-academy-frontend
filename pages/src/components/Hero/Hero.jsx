@@ -25,6 +25,21 @@ const Main = styled.div`
   height: 78vh;
   margin: 38px 0 0 140px;
   color: white;
+  @media only screen and (max-width: 920px) {
+    & {
+      margin: 0;
+      width: 90vw;
+      margin-left: 5vw;
+      height: 100vh;
+    }
+    .Header{
+      *{
+        display: none;
+      }
+      display: none !important;
+      position: absolute;
+    }
+  }
   .Header {
     max-height: 120px;
     @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
@@ -148,14 +163,12 @@ function Hero() {
         }}
         onReachEnd={() => console.log("reach end")}
       >
-        <SwiperSlide
-          id="home"
-        >
+        <SwiperSlide id="home">
           <HomePage />
-          <SldNxt stute={isC} setst={setIsC}/>
+          <SldNxt stute={isC} setst={setIsC} />
         </SwiperSlide>
         <SwiperSlide id="courses">
-          <Courses isc={setIsC} isstate={isC}  />
+          <Courses isc={setIsC} isstate={isC} />
         </SwiperSlide>
         <SwiperSlide id="whywe">
           <WhyWe />
