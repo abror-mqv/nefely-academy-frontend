@@ -13,6 +13,11 @@ import Four from "./Slides/4Four/Four";
 import Five from "./Slides/5Five/Five";
 
 const WhyWeStyled = styled.article`
+  @media only screen and (max-width: 920px) {
+    .Phone{
+      display: none;
+    }
+  }
   display: flex;
   justify-content: space-around;
   align-items: flex-start;

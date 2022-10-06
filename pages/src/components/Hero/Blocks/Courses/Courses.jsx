@@ -19,6 +19,12 @@ const CoursesStyled = styled.article`
     }
     .Main {
       height: 75vh !important;
+      width: 90vw !important;
+      margin-left: 5vw !important;
+    }
+    
+    .Buttons{
+      display: none !important;
     }
   }
   width: 100%;

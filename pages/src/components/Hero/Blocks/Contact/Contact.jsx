@@ -19,6 +19,11 @@ import FieldTel from "./Field/FieldTel";
 import Bolts from "../Bolts/Bolts";
 
 const StyledContact = styled.div`
+ @media only screen and (max-width: 920px) {
+  .PhoneImg{
+    display: none !important;
+  }
+ }
   width: 100%;
   height: 100%;
   display: flex;

@@ -10,6 +10,22 @@ const StyledCard = styled.div`
   * {
     transition: 0.2s;
   }
+  @media only screen and (max-width: 920px) {
+    &{
+      height: 70vh;
+      width: 100%;
+      .header{
+        *{
+          display: block;
+        }
+      }
+      .Card{
+        width: 90% !important;
+        height: 60vh !important;
+      }
+    }
+    
+  }
   text-align: center;
   height: 56vh;
 
