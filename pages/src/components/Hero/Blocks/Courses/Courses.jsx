@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,15 @@ import "swiper/css/pagination";
 
 import Card from "./Card";
 const CoursesStyled = styled.article`
+  @media only screen and (max-width: 920px) {
+    h3,
+    h4 {
+      display: none;
+    }
+    .Main {
+      height: 75vh !important;
+    }
+  }
   width: 100%;
   height: 100%;
   color: #000000;
@@ -76,7 +85,34 @@ const CoursesStyled = styled.article`
 import SwiperButtonNext from "./SwiperNextButton";
 import SwiperButtonPrev from "./SwiperPrevButton";
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+  return windowSize;
+}
+
 function Courses(props) {
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      console.log(window.innerHeight, window.innerWidth);
+    });
+  }, []);
+  const size = useWindowSize();
   const setIM = props.isc;
   console.log("State1: ", props.isstate);
   return (
@@ -93,10 +129,11 @@ function Courses(props) {
       </header>
       <div className="Main">
         <Swiper
-          slidesPerView={2}
+          slidesPerView={size.width <= 920 ? 1 : 2}
           spaceBetween={"0%"}
           className="mySwiper"
           mousewheel
+          direction={size.width <= 920 ? "vertical" : "horizontal"} 
         >
           <div className="Buttons">
             <SwiperButtonPrev />

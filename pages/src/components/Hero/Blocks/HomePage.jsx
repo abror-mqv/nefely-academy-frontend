@@ -10,6 +10,71 @@ const HomeStyle = styled.article`
   .Plate {
     width: 40vh;
   }
+  .YellowPapper {
+    display: none;
+  }
+  .AverageZp{
+    display: none;
+  }
+  @media only screen and (max-width: 920px) {
+    & {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      div {
+        width: 92%;
+        height: 70vh;
+      }
+    }
+    h2,
+    h5 {
+      display: none !important;
+      position: absolute;
+    }
+    img {
+      display: none;
+    }
+    h1 {
+      font-size: 6.5vw !important;
+      line-height: 4vh !important;
+      span {
+        font-size: 7.8vw;
+        color: #d3fc00;
+      }
+    }
+    .YellowPapper {
+      display: block;
+      color: #000000;
+      width: 120vw;
+      margin: 2vw;
+      padding: 2.2vh 21vw;
+      text-align: center;
+      font-size: 5vw;
+      background: #d3fc00;
+      transform: rotate(-5deg);
+      height: fit-content ;
+    }
+    h4{
+      width: 90% !important;
+    }
+    .AverageZp{
+      display: block;
+      width: 80% !important;
+      line-height: 4vh !important;
+      span{
+        color: #D3FC00;
+        font-size: 3vh !important;
+      }
+    }
+    button{
+      font-size: 4vw !important;
+      letter-spacing: 0.1vw !important;
+      padding: 4vw !important;
+    }
+    p, .Line{
+      display: none !important;
+    }
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -27,7 +92,7 @@ const HomeStyle = styled.article`
       text-align: center;
       color: #d3fc00;
     }
-    h5{
+    h5 {
       display: flex;
       justify-content: center;
       align-items: baseline;
@@ -49,8 +114,6 @@ const HomeStyle = styled.article`
         font-weight: 400;
         font-size: 2.6vw;
         line-height: 3.2vw;
-        display: flex;
-        align-items: center;
         text-align: center;
         color: #ffffff;
         text-shadow: 0px 0px 63px #d3fc00;
@@ -98,7 +161,7 @@ const HomeStyle = styled.article`
         /* transform: scale(102%); */
         width: 86%;
       }
-      button:active{
+      button:active {
         transform: scale(90%);
       }
       h4 {
@@ -146,7 +209,15 @@ function HomePage() {
         <h5>Обучение с нуля до мастера</h5>
         <div className="MainDiv">
           <Bolts />
-          <h1>Курсы по ремонту телефонов</h1>
+          <h1>
+            Курсы по ремонту <span>телефонов</span>
+          </h1>
+          <div className="YellowPapper">
+            Выведи свой зароботок на новый уровень
+          </div>
+          <h4 className="AverageZp">
+            Средняя ЗП по <span>СНГ 80.000</span> сом
+          </h4>
           <h4>
             Обучение с<span> 0 </span> до <span> МАСТЕРА</span>
           </h4>
@@ -157,7 +228,7 @@ function HomePage() {
           <p>0 999 344 955</p>
           <div className="Line"></div>
           <p style={{ marginTop: 0 }}>0 554 220 812</p>
-          <SlideNextButton/>
+          <SlideNextButton />
         </div>
       </div>
       <img className="Plate" src="/media/phone1.png" alt="" />

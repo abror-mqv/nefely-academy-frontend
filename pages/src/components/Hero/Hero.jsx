@@ -28,16 +28,15 @@ const Main = styled.div`
   @media only screen and (max-width: 920px) {
     & {
       margin: 0;
-      width: 90vw;
-      margin-left: 5vw;
+      width: 100vw;
       height: 100vh;
     }
     .Header{
-      *{
+      /* *{
         display: none;
       }
       display: none !important;
-      position: absolute;
+      position: absolute; */
     }
   }
   .Header {

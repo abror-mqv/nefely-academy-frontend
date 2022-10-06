@@ -9,7 +9,8 @@ function Index() {
   return (
     <main>
       <SideLineText />
-      <Hero/>
+      {/* this classname was given when i was so upside to make mobile version so i decided to build an absolutely new Hero-loke component to make a mobile-friendly app  */}
+      <Hero className="Desktop"/>
     </main>
   );
 }
