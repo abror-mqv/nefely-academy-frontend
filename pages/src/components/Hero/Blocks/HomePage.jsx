@@ -111,6 +111,8 @@ const HomeStyle = styled.article`
       border-radius: 19px;
       margin-top: 4vh;
       padding: 4vh 0;
+      width: 40vw;
+      margin-left: 8%;
       h1 {
         font-family: "Days One";
         font-style: normal;

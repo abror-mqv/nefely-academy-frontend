@@ -1,12 +1,71 @@
 import React from "react";
 import styled from "styled-components";
-import Bolt from './bolt.png'
+import Bolt from "./bolt.png";
 
 const StyledBolts = styled.div`
+
+  /* Never code after a bottle of bear */
+  @media screen and (max-height: 1995px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(55% + 24px);
+    margin-top: -5vw;
+  }
+  @media screen and (max-height: 1760px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(59% + 24px);
+    margin-top: -5vw;
+  }
+  @media screen and (max-height: 1660px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(59% + 24px);
+    margin-top: -4vw;
+  }
+  @media screen and (max-height: 1460px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(62% + 24px);
+    margin-top: -3.5vw;
+  }
+  
+  @media screen and (max-height: 1110px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(67% + 24px);
+    margin-top: -4vw;
+  }
+  @media screen and (max-height: 1110px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(67% + 24px);
+    margin-top: -4vw;
+  }
+  @media screen and (max-height: 1110px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(67% + 24px);
+    margin-top: -4vw;
+  }
+  @media screen and (max-height: 1024px) {
+    position: absolute;
+    width: calc(16px + 40vw);
+    height: calc(74% + 24px);
+    margin-top: -5vw;
+  }
+  @media screen and (max-height: 840px) {
+    position: absolute;
+    width: calc(-4px + 40vw);
+    height: calc(82% + 24px);
+    margin-top: -3.4vw;
+  }
+
+
   position: absolute;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  margin-top: -6vh;
+  width: calc(8px + 39vw);
+  height: calc(73% + 30px);
+  margin-top: -4vw;
   .Bolt1 {
     width: 32px;
     height: 32px;
