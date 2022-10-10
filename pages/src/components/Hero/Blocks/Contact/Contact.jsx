@@ -224,7 +224,7 @@ const StyledContact = styled.div`
 function Contact() {
   const SendLeed = (Lead) => {
     axios
-      .post("http://192.168.88.252:1337/api/requests/", {
+      .post("http://176.126.166.222:1337/api/requests/", {
         data: {
           Name: Lead.name,
           Number: Lead.email,

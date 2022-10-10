@@ -13,12 +13,13 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 body {
-  background-image: url("../public/media/back.png");
+  background-image: url("/media/foto_platy.png");
+  background-image: url("/media/");
   /* background-color: #000000 !important; */
 }
 @media only screen and (max-width: 920px) {
   body {
-    background-image: url("../public/media/foto_platy\ 1.png");
+    background-image: url("/media/back.png");
     /* background-color: #000000; */
     overflow: hidden !important;
   }

@@ -31,7 +31,7 @@ const Main = styled.div`
       width: 100vw;
       height: 100vh;
     }
-    .Header{
+    .HeaderLine{
       /* *{
         display: none;
       }
@@ -39,11 +39,11 @@ const Main = styled.div`
       position: absolute; */
     }
   }
-  .Header {
+  .HeaderLine {
     max-height: 120px;
     @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
     width: 60%;
-    height: 5vh;
+    height: 5vh !important;
     box-shadow: 3px 3px 5px 4px #000000, -3px -3px 9px 0.5px #ffffff;
     border-radius: 15px;
     display: flex;
@@ -137,7 +137,7 @@ function Hero() {
         spaceBetween={1}
         slidesPerView={13}
         onSwiper={setThumbsSwiper}
-        className="Header"
+        className="HeaderLine"
       >
         {headerLinks}
       </Swiper>
