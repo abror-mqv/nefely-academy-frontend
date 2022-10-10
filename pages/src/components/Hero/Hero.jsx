@@ -21,6 +21,10 @@ import Contact from "./Blocks/Contact/Contact";
 import SldNxt from "./SldNxt";
 
 const Main = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+  .HeaderLine{
+    max-height: 5vh !important;
+  }
   width: 82vw;
   height: 78vh;
   margin: 38px 0 0 140px;
@@ -31,17 +35,11 @@ const Main = styled.div`
       width: 100vw;
       height: 100vh;
     }
-    .HeaderLine{
-      /* *{
-        display: none;
-      }
-      display: none !important;
-      position: absolute; */
-    }
   }
+
   .HeaderLine {
     max-height: 120px;
-    @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+
     width: 60%;
     height: 5vh !important;
     box-shadow: 3px 3px 5px 4px #000000, -3px -3px 9px 0.5px #ffffff;
