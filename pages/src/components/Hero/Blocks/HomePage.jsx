@@ -104,7 +104,10 @@ const HomeStyle = styled.article`
     }
     .MainDiv {
       background: rgba(116, 116, 116, 0.1);
+
+      /* background: linear-gradient(145deg, #cacaca64, #f0f0f074); */
       box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #000000;
+      
       border-radius: 19px;
       margin-top: 4vh;
       padding: 4vh 0;
@@ -116,7 +119,7 @@ const HomeStyle = styled.article`
         line-height: 3.2vw;
         text-align: center;
         color: #ffffff;
-        text-shadow: 0px 0px 63px #d3fc00;
+        text-shadow: 0px 0px 63px #000000;
         width: 80%;
         z-index: 999;
       }

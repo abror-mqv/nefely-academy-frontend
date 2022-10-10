@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation, FreeMode, Scrollbar, Mousewheel } from "swiper";
 
 import One from "./Slides/1One/One";
 import Two from "./Slides/2Two/Two";
@@ -14,9 +14,36 @@ import Five from "./Slides/5Five/Five";
 
 const WhyWeStyled = styled.article`
   @media only screen and (max-width: 920px) {
-    .Phone{
+    .Phone {
       display: none;
     }
+    .Container {
+      display: none !important;
+    }
+    .MobileContainer {
+      display: block !important;
+    }
+    h5 {
+      align-items: flex-end !important;
+      font-size: 8vw !important;
+      span {
+        color: #d3fc00;
+        font-size: 12vw;
+      }
+    }
+  }
+  .MobileContainer {
+    
+    display: none;
+    background: rgba(116, 116, 116, 0.1);
+    box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #ffffff71;
+    border-radius: 19px;
+    margin-left: 4vw;
+    width: 92vw;
+    margin-top: 6vh;
+    height: 70vh;
+    overflow: hidden;
+    padding: 4vw;
   }
   display: flex;
   justify-content: space-around;
@@ -34,7 +61,7 @@ const WhyWeStyled = styled.article`
       font-family: "Days One";
       font-style: normal;
       font-weight: 400;
-      font-size: 52px;
+      font-size: 4.2vw;
       line-height: 62px;
       display: flex;
       align-items: center;
@@ -101,14 +128,16 @@ function WhyWe() {
       <img src="/media/SecondPhone.png" className="Phone" alt="" />
 
       <div className="Why">
-        <h5>Почему мы?</h5>
+        <h5>
+          Почему &nbsp;<span>мы?</span>
+        </h5>
         <div className="Container">
           <a href="https://www.pinterest.com/" className="Gallery">
             Галерея
           </a>
           <Swiper
             navigation={true}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, FreeMode, Scrollbar, Mousewheel]}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,
@@ -132,6 +161,31 @@ function WhyWe() {
             </SwiperSlide>
           </Swiper>
           <img src="/media/whyweslider.png" className="SliderBlock" alt="" />
+        </div>
+        <div className="MobileContainer">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={"100%"}
+            className="mySwiper"
+            direction={"vertical"}
+            modules={[FreeMode]}
+          >
+            <SwiperSlide>
+              <One />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Two />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Three />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Four />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Five />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </WhyWeStyled>

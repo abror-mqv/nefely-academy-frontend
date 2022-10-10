@@ -5,6 +5,45 @@ import Kaza from "./kaza.png";
 import Goal from "./goal.png";
 
 const StyledFour = styled.article`
+  @media only screen and (max-width: 920px) {
+    & {
+      display: flex;
+      justify-content: center !important;
+      gap: 6vh;
+      padding: 2vh !important;
+      align-items: center !important;
+      .Flexed {
+        img {
+          /* height: 18vw !important; */
+        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3vh !important;
+      }
+      .Flexedd {
+        img {
+          /* height: 18vw !important; */
+        }
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 3vh !important;
+      }
+      font-size: 1.9vh;
+      line-height: 2.8vh !important;
+      span {
+        font-size: 2.2vh !important;
+      }
+      p {
+        text-align: center;
+        img{
+          margin: 0 auto;
+          height: 40%;
+          width: 30%;
+        }
+      }
+    }
+  }
   width: 100%;
   height: 100%;
   padding: 6.8vh;
@@ -21,7 +60,12 @@ const StyledFour = styled.article`
   img {
     width: 16vh;
   }
-  .Flexed{
+  .Flexed {
+    display: flex;
+    justify-content: center;
+    gap: 6vh;
+  }
+  .Flexedd {
     display: flex;
     justify-content: center;
     gap: 6vh;
@@ -37,11 +81,12 @@ function Four() {
     <StyledFour>
       <p className="Flexed">
         <p>
-        По завершению обучения мы помогаем нашим ученикам найти место для
-        открытия <span>своего сервиса</span></p>
+          По завершению обучения мы помогаем нашим ученикам найти место для
+          открытия <span>своего сервиса</span>
+        </p>
         <img src={Goal.src} alt="" />
       </p>
-      <p className="Flexed">
+      <p className="Flexedd">
         <img src={Kaza.src} alt="" />
         Привозим профессиональное оборудование с Казахстана по низким ценам
       </p>

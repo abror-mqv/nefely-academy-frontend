@@ -5,6 +5,45 @@ import Money from "./money.png";
 import Team from "./team.png";
 
 const StyledFive = styled.article`
+  @media only screen and (max-width: 920px) {
+    & {
+      display: flex;
+      justify-content: center !important;
+      gap: 6vh;
+      padding: 2vh !important;
+      align-items: center !important;
+      .Flexed {
+        img {
+          /* height: 18vw !important; */
+        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3vh !important;
+      }
+      .Flexedd {
+        img {
+          /* height: 18vw !important; */
+        }
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 3vh !important;
+      }
+      font-size: 2.2vh;
+      line-height: 2.8vh !important;
+      span {
+        font-size: 2.2vh !important;
+      }
+      p {
+        text-align: center;
+        img {
+          margin: 0 auto;
+          height: 50%;
+          width: 30%;
+        }
+      }
+    }
+  }
   width: 100%;
   height: 100%;
   padding: 6.8vh;
@@ -18,10 +57,10 @@ const StyledFive = styled.article`
   flex-direction: column;
   align-items: center;
   gap: 3.5vh;
-  img{
+  img {
     width: 17vh;
   }
-  .Flexed{
+  .Flexed {
     display: flex;
     justify-content: center;
     gap: 6vh;

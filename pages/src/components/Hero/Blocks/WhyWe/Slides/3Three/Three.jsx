@@ -4,6 +4,23 @@ import styled from "styled-components";
 import Micro from "./path0.png";
 
 const StyledThree = styled.article`
+  @media only screen and (max-width: 920px) {
+    & {
+      display: flex;
+      justify-content: center;
+      gap: 3.5vh;
+      .Flexed {
+        img {
+          height: 18vh !important;
+        }
+      }
+      font-size: 2.2vh;
+      line-height: 2.6vh !important;
+      span {
+        font-size: 4vh !important;
+      }
+    }
+  }
   width: 100%;
   height: 100%;
   padding: 2.8vh;
@@ -47,9 +64,9 @@ const StyledThree = styled.article`
     padding-left: 30%;
     margin-top: -2vh;
   }
-  .Centered{
+  .Centered {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
   }
 `;
 

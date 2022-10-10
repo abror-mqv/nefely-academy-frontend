@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import axios from "axios";
 import Head from "next/head";
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -19,11 +20,61 @@ import FieldTel from "./Field/FieldTel";
 import Bolts from "../Bolts/Bolts";
 
 const StyledContact = styled.div`
- @media only screen and (max-width: 920px) {
-  .PhoneImg{
-    display: none !important;
+  @media only screen and (max-width: 920px) {
+    .PhoneImg {
+      display: none !important;
+    }
+    .Container {
+      flex-wrap: wrap;
+    }
+    .Main {
+      width: 84% !important;
+      height: 83% !important;
+      margin-top: -12vh;
+      padding-bottom: 4vh;
+      .Container {
+        padding: 12vw;
+        display: flex !important;
+        /* justify-content: center !important;
+        align-items: center !important; */
+        .Write {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+    button {
+      width: 104% !important;
+      margin-left: 0 !important;
+      justify-content: center !important;
+      gap: 8vw !important;
+    }
+    h5 {
+      font-size: 6vw !important;
+    }
+
+    .Contacts {
+      width: 100%;
+      .Title {
+        font-size: 5vw !important;
+        text-align: center !important;
+        width: 100%;
+      }
+    }
+    button:hover {
+      transform: scale(100%);
+      padding-left: 0 !important;
+      box-shadow: 6px 6px 12px #000000,
+        -3px -3px 20px -3px rgba(255, 255, 255, 0.803);
+    }
   }
- }
   width: 100%;
   height: 100%;
   display: flex;
@@ -93,6 +144,7 @@ const StyledContact = styled.div`
         transition: 0.3s;
         gap: 1.3vh;
         cursor: pointer;
+        border: 0;
       }
       button:hover {
         transform: scale(100%);
@@ -170,6 +222,21 @@ const StyledContact = styled.div`
   }
 `;
 function Contact() {
+  const SendLeed = (Lead) => {
+    axios
+      .post("http://192.168.88.252:1337/api/requests/", {
+        data: {
+          Name: Lead.name,
+          Number: Lead.email,
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <StyledContact>
       <Head></Head>
@@ -181,7 +248,7 @@ function Contact() {
               initialValues={{ name: "", email: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
-                alert(JSON.stringify(values, null, 2));
+                SendLeed(values);
               }}
             >
               <Form>

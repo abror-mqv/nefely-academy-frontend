@@ -4,6 +4,23 @@ import styled from "styled-components";
 import Icon from "./icon.png";
 
 const OneStyled = styled.article`
+  @media only screen and (max-width: 920px) {
+    & {
+      display: flex;
+      justify-content: center;
+      gap: 6vh;
+      .Flexed {
+        img {
+          height: 30vw !important;
+        }
+      }
+      font-size: 2.2vh;
+      line-height: 2.8vh !important;
+      span {
+        font-size: 4vh !important;
+      }
+    }
+  }
   width: 100%;
   height: 100%;
   padding: 2.5vh;
@@ -12,7 +29,6 @@ const OneStyled = styled.article`
   font-weight: 400;
   font-size: 3vh;
   line-height: 4vh;
-
   color: #ffffff;
   display: flex;
   flex-direction: column;

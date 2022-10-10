@@ -5,6 +5,28 @@ import Lang from "./languages.png";
 import Time from "./timetable.png";
 
 const TwoStyled = styled.article`
+  @media only screen and (max-width: 920px) {
+    & {
+      display: flex;
+      justify-content: center;
+      gap: 4vh;
+      .Flexed {
+        img {
+          height: 30vw !important;
+        }
+      }
+      font-size: 2.2vh;
+      line-height: 2.6vh !important;
+      span {
+        font-size: 4vh !important;
+      }
+      .Last {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
   width: 100%;
   height: 100%;
   padding: 2.8vh;
