@@ -26,6 +26,7 @@ const WhyWeStyled = styled.article`
     h5 {
       align-items: flex-end !important;
       font-size: 8vw !important;
+      margin-top: 2vh !important;
       span {
         color: #d3fc00;
         font-size: 12vw;
@@ -36,11 +37,11 @@ const WhyWeStyled = styled.article`
     
     display: none;
     background: rgba(116, 116, 116, 0.1);
-    box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #ffffff71;
+    box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #000000;
     border-radius: 19px;
     margin-left: 4vw;
     width: 92vw;
-    margin-top: 6vh;
+    margin-top: 1vh;
     height: 70vh;
     overflow: hidden;
     padding: 4vw;

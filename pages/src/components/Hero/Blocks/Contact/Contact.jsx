@@ -29,8 +29,8 @@ const StyledContact = styled.div`
     }
     .Main {
       width: 84% !important;
-      height: 83% !important;
-      margin-top: -12vh;
+      height: 82% !important;
+      margin-top: -14vh;
       padding-bottom: 4vh;
       .Container {
         padding: 12vw;
@@ -272,17 +272,20 @@ function Contact() {
               ул.Киевская 39, <br />3 этаж
             </p>
             <div className="ContactButtons">
-              <a href="#" className="MicroButton">
+              <a
+                href="https://wa.me/+996999344955?text=I%27m%20interested%20in%20your%20course%20for%20sale"
+                className="MicroButton"
+              >
                 <WhatsAppIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
               </a>
-              <a href="#" className="MicroButton">
+              <a href="tel:+996999344955" className="MicroButton">
                 <CallIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
               </a>
-              <a href="#" className="MicroButton">
+              <a href="https://www.instagram.com/academy_nefely/" className="MicroButton">
                 <InstagramIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />

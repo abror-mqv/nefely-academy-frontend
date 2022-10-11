@@ -23,7 +23,7 @@ const HomeStyle = styled.article`
       justify-content: center;
       div {
         width: 92%;
-        height: 70vh;
+        height: 79vh;
       }
     }
     
