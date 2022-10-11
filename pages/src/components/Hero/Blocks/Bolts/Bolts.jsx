@@ -56,9 +56,9 @@ const StyledBolts = styled.div`
   }
   @media screen and (max-height: 840px) {
     position: absolute;
-    width: calc(-4px + 40vw);
-    height: calc(82% + 24px);
-    margin-top: -3.4vw;
+    width: calc(-4px + 42vw);
+    height: calc(75% + 24px);
+    margin-top: -3.2vw;
   }
 
 

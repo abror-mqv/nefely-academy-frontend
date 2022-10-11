@@ -13,7 +13,7 @@ const HomeStyle = styled.article`
   .YellowPapper {
     display: none;
   }
-  .AverageZp{
+  .AverageZp {
     display: none;
   }
   @media only screen and (max-width: 920px) {
@@ -52,26 +52,27 @@ const HomeStyle = styled.article`
       font-size: 5vw;
       background: #d3fc00;
       transform: rotate(-5deg);
-      height: fit-content ;
+      height: fit-content;
     }
-    h4{
+    h4 {
       width: 90% !important;
     }
-    .AverageZp{
+    .AverageZp {
       display: block;
       width: 80% !important;
       line-height: 4vh !important;
-      span{
-        color: #D3FC00;
+      span {
+        color: #d3fc00;
         font-size: 3vh !important;
       }
     }
-    button{
+    button {
       font-size: 4vw !important;
       letter-spacing: 0.1vw !important;
       padding: 4vw !important;
     }
-    p, .Line{
+    p,
+    .Line {
       display: none !important;
     }
   }
@@ -85,12 +86,14 @@ const HomeStyle = styled.article`
       font-family: "Jura";
       font-style: normal;
       font-weight: 700;
-      font-size: 56px;
+      font-size: 3vw;
       line-height: 66px;
       display: flex;
       align-items: center;
       text-align: center;
       color: #d3fc00;
+      margin-left: 8%;
+      margin-top: 3vh;
     }
     h5 {
       display: flex;
@@ -101,24 +104,25 @@ const HomeStyle = styled.article`
       width: auto;
       overflow-x: auto;
       line-break: auto;
+      margin-left: 8%;
     }
     .MainDiv {
       background: rgba(116, 116, 116, 0.1);
 
       /* background: linear-gradient(145deg, #cacaca64, #f0f0f074); */
       box-shadow: -6px -6px 33px -18px #ffffff, 25px 25px 50px -9px #000000;
-      
+
       border-radius: 19px;
       margin-top: 4vh;
       padding: 4vh 0;
-      width: 40vw;
+      width: 44vw;
       margin-left: 8%;
       h1 {
         font-family: "Days One";
         font-style: normal;
         font-weight: 400;
         font-size: 2.6vw;
-        line-height: 3.2vw;
+        line-height: 3vw;
         text-align: center;
         color: #ffffff;
         text-shadow: 0px 0px 63px #000000;
@@ -133,7 +137,7 @@ const HomeStyle = styled.article`
         line-height: 28px;
         text-align: center;
         color: rgba(255, 255, 255, 0.76);
-        margin-top: 4vh;
+        margin-top: 3vh;
         display: flex;
         z-index: 999;
         justify-content: center !important;
@@ -150,7 +154,7 @@ const HomeStyle = styled.article`
 
         letter-spacing: 0.14em;
         color: #010101;
-        margin-top: 4vh;
+        margin-top: 3vh;
         padding: 10px 25px 10px 25px;
         text-transform: uppercase;
         width: 80%;
@@ -179,7 +183,7 @@ const HomeStyle = styled.article`
         text-align: center;
         width: 22vw;
         color: rgba(255, 255, 255, 0.8);
-        margin-top: 4vh;
+        margin-top: 3vh;
         justify-content: center;
         z-index: 999;
         span {

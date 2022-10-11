@@ -1,7 +1,4 @@
 import React from "react";
-
-
-import Header from "./components/Header/Header";
 import SideLineText from "./components/SideLineText/SideLineText";
 import Hero from "./components/Hero/Hero";
 
