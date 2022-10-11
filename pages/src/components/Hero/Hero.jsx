@@ -35,6 +35,13 @@ const Main = styled.div`
       width: 100vw;
       height: 100vh;
     }
+    .HeaderLine{
+      width: 100vw !important;
+      font-size: 3vw !important;
+      .swiper-wrapper{
+        width: 100%;
+      }
+    }
   }
 
   .HeaderLine {

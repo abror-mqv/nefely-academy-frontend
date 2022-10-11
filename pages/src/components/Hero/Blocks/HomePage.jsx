@@ -26,10 +26,15 @@ const HomeStyle = styled.article`
         height: 70vh;
       }
     }
+    
     h2,
     h5 {
       display: none !important;
       position: absolute;
+    }
+    .MainDiv{
+      width: 90vw !important;
+      margin-left: 0 !important;
     }
     img {
       display: none;
