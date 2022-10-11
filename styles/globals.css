@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Days One";
-  src: local("Days One"), url(../pages/src/fonts/font.ttf) format("truetype");
+  src: local("Days One"), url("./font.ttf") format("truetype");
 }
 
 html,
@@ -14,13 +14,10 @@ body {
 }
 body {
   background-image: url("/media/foto_platy.png");
-  /* background-image: url("/media/"); */
-  /* background-color: #000000 !important; */
 }
 @media only screen and (max-width: 920px) {
   body {
     background-image: url("/media/back.png");
-    /* background-color: #000000; */
     overflow: hidden !important;
   }
   .swiper-pagination {
