@@ -32,6 +32,10 @@ const StyledContact = styled.div`
       height: 82% !important;
       margin-top: -14vh;
       padding-bottom: 4vh;
+      background: rgb(200 200 200 / 36%) !important;
+      box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important;
+      box-shadow: none !important;
+
       .Container {
         padding: 12vw;
         display: flex !important;
@@ -273,7 +277,7 @@ function Contact() {
             </p>
             <div className="ContactButtons">
               <a
-                href="https://wa.me/+996999344955?text=I%27m%20interested%20in%20your%20course%20for%20sale"
+                href="https://wa.me/+996999344955?text=Здравстуйте,%27m%расскажите%20мне%20о%20ваших%20курсах"
                 className="MicroButton"
               >
                 <WhatsAppIcon

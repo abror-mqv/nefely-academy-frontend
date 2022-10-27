@@ -17,7 +17,7 @@ body {
 }
 @media only screen and (max-width: 920px) {
   body {
-    background-image: url("/media/back.png");
+    background-image: url("/media/foto_platy.png");
     overflow: hidden !important;
   }
   .swiper-pagination {
@@ -113,11 +113,11 @@ a {
 }
 
 .css-1ptx2yq-MuiInputBase-root-MuiInput-root:before {
-  border-bottom: 1px solid #d3fc00;
+  border-bottom: 1px solid #d3fc00 !important;
 }
 
 .css-1ptx2yq-MuiInputBase-root-MuiInput-root:after {
-  border-bottom: 3px solid #d3fc00;
+  border-bottom: 3px solid #d3fc00 !important;
 }
 .css-1x51dt5-MuiInputBase-input-MuiInput-input {
   color: #fff !important;

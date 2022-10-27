@@ -22,6 +22,8 @@ const StyledCard = styled.div`
       .Card{
         width: 90% !important;
         height: 60vh !important;
+        box-shadow: none !important;
+
       }
     }
     

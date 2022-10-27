@@ -22,6 +22,9 @@ const WhyWeStyled = styled.article`
     }
     .MobileContainer {
       display: block !important;
+      background: rgb(200 200 200 / 36%) !important;
+      box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important;
+      box-shadow: none !important;
     }
     h5 {
       align-items: flex-end !important;

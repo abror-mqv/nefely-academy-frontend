@@ -19,10 +19,11 @@ import Courses from "./Blocks/Courses/Courses";
 import WhyWe from "./Blocks/WhyWe/WhyWe";
 import Contact from "./Blocks/Contact/Contact";
 import SldNxt from "./SldNxt";
+import Footer from "./Blocks/Footer/Footer";
 
 const Main = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
-  .HeaderLine{
+  .HeaderLine {
     max-height: 5vh !important;
   }
   width: 82vw;
@@ -35,13 +36,14 @@ const Main = styled.div`
       width: 100vw;
       height: 100vh;
     }
-    .HeaderLine{
-      margin-top: 4vh;
-      margin-bottom: 4vh;
+    .HeaderLine {
+      margin-top: 2vh;
+      margin-bottom: 1vh;
       width: 94vw !important;
       font-size: 3vw !important;
       margin-left: 3vw !important;
-      .swiper-wrapper{
+      max-height: 4vh !important;
+      .swiper-wrapper {
         width: 100%;
       }
     }
@@ -53,6 +55,10 @@ const Main = styled.div`
     width: 60%;
     height: 5vh !important;
     box-shadow: 3px 3px 5px 4px #000000, -3px -3px 9px 0.5px #ffffff;
+
+    background: rgb(200 200 200 / 36%) !important;
+    box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important;
+
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
@@ -135,7 +141,7 @@ function Hero() {
       className={currentSlide != 4 ? "WhiteLink" : "YellowLink"}
       key={5}
     >
-      Ремонт
+      Где?
     </SwiperSlide>,
   ];
   return (
@@ -183,7 +189,9 @@ function Hero() {
         <SwiperSlide id="contact">
           <Contact />
         </SwiperSlide>
-        <SwiperSlide id="footer">Footer</SwiperSlide>
+        <SwiperSlide id="footer">
+          <Footer/>
+        </SwiperSlide>
       </Swiper>
     </Main>
   );

@@ -21,6 +21,10 @@ const CoursesStyled = styled.article`
       height: 75vh !important;
       width: 90vw !important;
       margin-left: 5vw !important;
+      background: rgb(200 200 200 / 36%) !important;
+      /* box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important; */
+      box-shadow: none !important;
+
     }
     
     .Buttons{

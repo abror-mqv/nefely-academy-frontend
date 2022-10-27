@@ -26,15 +26,20 @@ const HomeStyle = styled.article`
         height: 79vh;
       }
     }
-    
+
     h2,
     h5 {
       display: none !important;
       position: absolute;
     }
-    .MainDiv{
+    .MainDiv {
       width: 90vw !important;
       margin-left: 0 !important;
+      margin-top: 2vh !important;
+      background: rgb(200 200 200 / 36%) !important;
+      /* box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important; */
+      box-shadow: none !important;
+      height: 75vh !important;
     }
     img {
       display: none;
@@ -75,6 +80,7 @@ const HomeStyle = styled.article`
       font-size: 4vw !important;
       letter-spacing: 0.1vw !important;
       padding: 4vw !important;
+      margin-top: 10vh !important;
     }
     p,
     .Line {
