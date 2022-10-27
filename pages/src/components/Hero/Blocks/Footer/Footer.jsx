@@ -122,11 +122,11 @@ function Footer() {
           <iframe
             className="gmap_iframe"
             width="100%"
-            frameborder="0"
+            frameBorder="0"
             scrolling="yes"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Киевская 39 academy_smart&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            marginHeight="0"
+            marginWidth="0"
+            src='https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Киевская 39 academy_smart&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
           ></iframe>
         </div>
       </div>
@@ -144,7 +144,7 @@ function Footer() {
           <p className="footer__link">
             <Link href="/privacy">Условия пользования</Link>
           </p>
-          <p className="footer__years">© ООО "СМАРТ АКАДЕМИЯ", 2022</p>
+          <p className="footer__years">© ООО &quot СМАРТ АКАДЕМИЯ &quot, 2022</p>
         </div>
         <div className="right-panel">
           <p className="footer__contacts">

@@ -141,7 +141,7 @@ function Hero() {
       className={currentSlide != 4 ? "WhiteLink" : "YellowLink"}
       key={5}
     >
-      Где?
+      Где~?
     </SwiperSlide>,
   ];
   return (
