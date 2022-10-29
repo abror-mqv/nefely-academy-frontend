@@ -56,7 +56,7 @@ function One() {
   return (
     <OneStyled>
       <p className="Flexed">
-        <img src={Icon.src} alt="" className="One" />
+        <img src={Icon.src} alt="Практика по ремонту сотовых телеофнов бишкек" className="One" />
         Чтобы стать лидерами рынка мы отобрали лучшие темы для образования
       </p>
 

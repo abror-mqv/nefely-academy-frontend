@@ -152,14 +152,16 @@ function Card(props) {
         <h3 className="YellowH">{props.primary_name}</h3>
       </div>
       <div className="Card">
-        <div className="Image"></div>
+        <div className="Image" style={{
+          backgroundImage: `url('http://176.126.166.222:1337${props.picture}')`
+        }}></div>
         <p className="CardParag">{props.description}</p>
         <div className="Price">
           {/* <SlideButton/> */}
           <div onClick={() => {
               GoSlide(true)
           }}>
-            Записаться <img src={Join.src} alt="" />
+            Записаться <img src={Join.src} alt="Записаться на курсы по ремонту телеофнов" />
           </div>
         </div>
       </div>

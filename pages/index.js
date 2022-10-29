@@ -9,6 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Nefely Academy - курсы ремонта телефонов</title>
+        <meta name="yandex-verification" content="3e6471ecb20fbdd6" />
         <meta
           name="description"
           content="
@@ -27,6 +28,7 @@ export default function Home() {
           name="google-site-verification"
           content="toEKl8eevecUxpT6u2PV0jtQi9W8VS_Dd1f19bSMwaY"
         />
+        <meta name="author" content="John Doe" />
       </Head>
       <Index />
     </div>

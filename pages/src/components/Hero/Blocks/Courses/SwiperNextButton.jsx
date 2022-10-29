@@ -45,7 +45,7 @@ const SwiperButtonNext = ({ children }) => {
         height: "80px",
       }}
     >
-      <img src={NextButton.src} />
+      <img src={NextButton.src} alt="Следующий курс"/>
     </Button>
   );
 };

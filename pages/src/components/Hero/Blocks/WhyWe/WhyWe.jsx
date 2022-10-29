@@ -129,7 +129,7 @@ const WhyWeStyled = styled.article`
 function WhyWe() {
   return (
     <WhyWeStyled>
-      <img src="/media/SecondPhone.png" className="Phone" alt="" />
+      <img src="/media/SecondPhone.png" className="Phone" alt="какие курсы вабрать" />
 
       <div className="Why">
         <h5>
@@ -164,7 +164,7 @@ function WhyWe() {
               <Five />
             </SwiperSlide>
           </Swiper>
-          <img src="/media/whyweslider.png" className="SliderBlock" alt="" />
+          <img src="/media/whyweslider.png" className="SliderBlock" alt="Nefely academy" />
         </div>
         <div className="MobileContainer">
           <Swiper

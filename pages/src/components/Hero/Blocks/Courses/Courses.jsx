@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styled from "styled-components";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
-
 import { FreeMode, Navigation, Pagination } from "swiper";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
 import Card from "./Card";
 const CoursesStyled = styled.article`
   @media only screen and (max-width: 920px) {
@@ -24,10 +21,9 @@ const CoursesStyled = styled.article`
       background: rgb(200 200 200 / 36%) !important;
       /* box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important; */
       box-shadow: none !important;
-
     }
-    
-    .Buttons{
+
+    .Buttons {
       display: none !important;
     }
   }
@@ -125,6 +121,27 @@ function Courses(props) {
   const size = useWindowSize();
   const setIM = props.isc;
   console.log("State1: ", props.isstate);
+
+  const [fetchedData, setFetchedData] = useState([]);
+  const [viewList, setViewList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data: response } = await axios.get(
+          "http://176.126.166.222:1337/api/courses"
+        );
+
+        setFetchedData(response.data);
+        console.log("UNO   ", fetchedData);
+        fetchData.sort((a, b) => a.attributes.Index + b.attributes.Index);
+        console.log("ZWAIN ", fetchedData);
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <CoursesStyled>
       <header>
@@ -143,48 +160,28 @@ function Courses(props) {
           spaceBetween={"0%"}
           className="mySwiper"
           mousewheel
-          direction={size.width <= 920 ? "vertical" : "horizontal"} 
+          direction={size.width <= 920 ? "vertical" : "horizontal"}
         >
           <div className="Buttons">
             <SwiperButtonPrev />
             <SwiperButtonNext />
           </div>
-
-          <SwiperSlide>
-            <Card
-              top_name="Курс"
-              primary_name='"Начальный"'
-              description="48 часов практики
-Выдача сертификатов
-после 48 часов
-Обучение с 0 до МАСТЕРА"
-              btn={props.SldN}
-              isc={setIM}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              top_name="Курс"
-              primary_name='"Профессиональный"'
-              description="72 часов практики
-Выдача сертификатов
-после 72 часов
-Обучение с 0 до МАСТЕРА
-Помогаем открыть свою точку"
-              isc={setIM}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              top_name="Курс по ремонту"
-              primary_name='"Ноутбуков"'
-              description="48 часов практики
-Выдача сертификатов
-после 48 часов
-Обучение с 0 до МАСТЕРА"
-              isc={setIM}
-            />
-          </SwiperSlide>
+          {fetchedData.map((el) => {
+            return (
+              <>
+                <SwiperSlide>
+                  <Card
+                    top_name={el.attributes.WhiteTitle}
+                    primary_name={el.attributes.YellowTitle}
+                    description={el.attributes.Description}
+                    picture={el.attributes.ImageLink}
+                    btn={props.SldN}
+                    isc={setIM}
+                  />
+                </SwiperSlide>
+              </>
+            );
+          })}
         </Swiper>
       </div>
     </CoursesStyled>
@@ -192,3 +189,29 @@ function Courses(props) {
 }
 
 export default Courses;
+
+{
+  /* <SwiperSlide>
+<Card
+  top_name="Курс"
+  primary_name='"Профессиональный"'
+  description="72 часов практики
+Выдача сертификатов
+после 72 часов
+Обучение с 0 до МАСТЕРА
+Помогаем открыть свою точку"
+  isc={setIM}
+/>
+</SwiperSlide>
+<SwiperSlide>
+<Card
+  top_name="Курс по ремонту"
+  primary_name='"Ноутбуков"'
+  description="48 часов практики
+Выдача сертификатов
+после 48 часов
+Обучение с 0 до МАСТЕРА"
+  isc={setIM}
+/>
+</SwiperSlide> */
+}

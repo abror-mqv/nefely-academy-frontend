@@ -72,13 +72,13 @@ function Five() {
   return (
     <StyledFive>
       <p className="Flexed">
-        <img src={Money.src} alt="" />
+        <img src={Money.src} alt="цум подвал курсы" />
         Знакомим с нашими друзьями которые продают модули для ремонта по низким
         ценам
       </p>
       <p className="Flexed">
         Выращиваем из наших учеников дружную семью
-        <img src={Team.src} alt="" />
+        <img src={Team.src} alt="курсы техники для детей" />
       </p>
     </StyledFive>
   );

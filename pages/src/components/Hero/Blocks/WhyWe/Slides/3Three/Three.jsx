@@ -74,7 +74,7 @@ function Three() {
   return (
     <StyledThree>
       <p className="Flexed">
-        <img src={Micro.src} alt="" className="Micro" />
+        <img src={Micro.src} alt="Курсы ремонта телефонов" className="Micro" />
         <p>
           Поставили в класс лучшее оборудование <br />
           <br />

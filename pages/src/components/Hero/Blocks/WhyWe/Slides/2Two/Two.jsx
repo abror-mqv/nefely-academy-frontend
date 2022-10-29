@@ -75,7 +75,7 @@ function Two() {
   return (
     <TwoStyled>
       <p className="Flexed">
-        <img src={Lang.src} alt="" className="Lang" />
+        <img src={Lang.src} alt="кыргыз тилине телеофон ондоо курстар" className="Lang" />
         Обучение можно пройти на Русском и на Кыргызском языках
       </p>
       <p className="Wide">
@@ -88,7 +88,7 @@ function Two() {
           <br /> С 17:00 до 19:00
         </div>
 
-        <img src={Time.src} alt="" className="Time" />
+        <img src={Time.src} alt="Вечерние курсы бишкек" className="Time" />
       </p>
     </TwoStyled>
   );

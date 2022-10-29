@@ -142,10 +142,10 @@ const StyledBolts = styled.div`
 function Bolts() {
   return (
     <StyledBolts>
-      <img className="Bolt1" src={Bolt.src} alt="" />
-      <img className="Bolt2" src={Bolt.src} alt="" />
-      <img className="Bolt3" src={Bolt.src} alt="" />
-      <img className="Bolt4" src={Bolt.src} alt="" />
+      <img className="Bolt1" src={Bolt.src} alt="Запчасть от телефона Бишкек" />
+      <img className="Bolt2" src={Bolt.src} alt="Запчасть от телефона Бишкек" />
+      <img className="Bolt3" src={Bolt.src} alt="Запчасть от телефона Бишкек" />
+      <img className="Bolt4" src={Bolt.src} alt="Запчасть от телефона Бишкек" />
     </StyledBolts>
   );
 }

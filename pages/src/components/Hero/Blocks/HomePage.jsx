@@ -251,7 +251,7 @@ function HomePage() {
           <SlideNextButton />
         </div>
       </div>
-      <img className="Plate" src="/media/phone1.png" alt="" />
+      <img className="Plate" src="/media/phone1.png" alt="Курсы ремонта телеофнов" />
     </HomeStyle>
   );
 }
