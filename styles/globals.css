@@ -126,3 +126,77 @@ a {
 #courses {
   transition: 0.3s;
 }
+
+.css-mnn31 {
+  color: #fff !important;
+}
+.css-1vv4lmi:after {
+  border-bottom: 2px solid #d3fc00 !important;
+}
+input {
+  color: #fff;
+}
+.StyledBoxModal {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 30% !important;
+  background-color: rgba(113, 113, 113, 0.86);
+  color: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.BoxModal__button {
+  width: 100%;
+  padding: 1%;
+  font-weight: 999;
+  background: linear-gradient(273.14deg, #d3fc00 27.24%, #fcf200 103.71%);
+  box-shadow: 6px 6px 12px #000000,
+    -3px -3px 14px -3px rgba(255, 255, 255, 0.66);
+  color: #000000;
+  font-family: "Jura" !important;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 920px) {
+  .StyledBoxModal {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100% !important;
+    height: 30% !important;
+    background-color: rgba(113, 113, 113, 0.86);
+    color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 !important;
+    text-align: center;
+  }
+  .BoxModal__button {
+    width: 100%;
+    padding: 1%;
+    font-weight: 999;
+    background: linear-gradient(273.14deg, #d3fc00 27.24%, #fcf200 103.71%);
+    box-shadow: 6px 6px 12px #000000,
+      -3px -3px 14px -3px rgba(255, 255, 255, 0.66);
+    color: #000000;
+    font-family: "Jura" !important;
+    font-size: 28px;
+  }
+  
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+  background-color: rgb(0 0 0 / 74%);
+}

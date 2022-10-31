@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
 import axios from "axios";
 import Head from "next/head";
-import TextField from "@mui/material/TextField";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Box from "@mui/material/Box";
 import SendIcon from "@mui/icons-material/Send";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CallIcon from "@mui/icons-material/Call";
-
-import { render } from "react-dom";
 import { Formik, Field, Form } from "formik";
-import * as Yup from "yup";
-
+import Modal from "@mui/material/Modal";
 import FieldName from "./Field/FieldName";
 import FieldTel from "./Field/FieldTel";
-import Bolts from "../Bolts/Bolts";
+import { Button } from "@mui/material";
 
 const StyledContact = styled.div`
   @media only screen and (max-width: 920px) {
@@ -226,6 +220,8 @@ const StyledContact = styled.div`
   }
 `;
 function Contact() {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
   const SendLeed = (Lead) => {
     axios
       .post("http://176.126.166.222:1337/api/requests/", {
@@ -235,12 +231,13 @@ function Contact() {
         },
       })
       .then(function (response) {
-        console.log(response);
+        setOpen(true);
       })
       .catch(function (error) {
         console.log(error);
       });
   };
+
   return (
     <StyledContact>
       <Head></Head>
@@ -289,7 +286,10 @@ function Contact() {
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
               </a>
-              <a href="https://www.instagram.com/academy_nefely/" className="MicroButton">
+              <a
+                href="https://www.instagram.com/academy_nefely/"
+                className="MicroButton"
+              >
                 <InstagramIcon
                   sx={{ color: "#000000", height: "4.2vh", width: "4.2vh" }}
                 />
@@ -298,7 +298,37 @@ function Contact() {
           </div>
         </div>
       </div>
-      <img src="/media/phone1.webp" className="PhoneImg" alt="Средняя зарпалта мастера по ремонту телефонов" />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box className="StyledBoxModal">
+          <p></p>
+          <p id="modal-modal-title" variant="h6" component="h2">
+            Ваша заявка успешно принята!
+            <br /> <br />В ближайшее ремя Вам позвонит наш администратор!
+          </p>
+          <Button
+            variant="contained"
+            className="BoxModal__button"
+            color="success"
+            onClick={() => {
+              setOpen(false);
+              FieldName = null;
+              FieldTel = null;
+            }}
+          >
+            Отлично
+          </Button>
+        </Box>
+      </Modal>
+      <img
+        src="/media/phone1.webp"
+        className="PhoneImg"
+        alt="Средняя зарпалта мастера по ремонту телефонов"
+      />
     </StyledContact>
   );
 }
