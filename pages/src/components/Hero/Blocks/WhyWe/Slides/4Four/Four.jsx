@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Kaza from "./kaza.png";
-import Goal from "./goal.png";
+import Kaza from "./kaza.webp";
+import Goal from "./goal.webp";
 
 const StyledFour = styled.article`
   @media only screen and (max-width: 920px) {

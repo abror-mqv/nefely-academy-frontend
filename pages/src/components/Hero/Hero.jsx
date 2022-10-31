@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import styled from "styled-components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -190,7 +189,7 @@ function Hero() {
           <Contact />
         </SwiperSlide>
         <SwiperSlide id="footer">
-          <Footer/>
+          <Footer />
         </SwiperSlide>
       </Swiper>
     </Main>

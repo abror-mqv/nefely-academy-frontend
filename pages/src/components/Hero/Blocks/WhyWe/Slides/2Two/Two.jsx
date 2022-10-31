@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Lang from "./languages.png";
-import Time from "./timetable.png";
+import Lang from "./languages.webp";
+import Time from "./timetable.webp";
 
 const TwoStyled = styled.article`
   @media only screen and (max-width: 920px) {

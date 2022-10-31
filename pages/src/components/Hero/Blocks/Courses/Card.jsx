@@ -151,7 +151,7 @@ function Card(props) {
           className="Image"
           loader={() => src}
           src={src}
-          alt="Picture of the author"
+          alt={`${props.primary_name} ${props.top_name}`}
           width={200}
           height={150}
         />

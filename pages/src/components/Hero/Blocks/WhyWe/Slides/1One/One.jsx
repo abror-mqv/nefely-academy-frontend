@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import Icon from "./icon.png";
+import Icon from "./icon.webp";
 
 const OneStyled = styled.article`
   @media only screen and (max-width: 920px) {

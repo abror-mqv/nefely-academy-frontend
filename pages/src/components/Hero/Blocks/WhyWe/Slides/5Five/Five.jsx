@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Money from "./money.png";
-import Team from "./team.png";
+import Money from "./money.webp";
+import Team from "./team.webp";
 
 const StyledFive = styled.article`
   @media only screen and (max-width: 920px) {

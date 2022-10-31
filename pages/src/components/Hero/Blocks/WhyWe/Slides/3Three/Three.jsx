@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Micro from "./path0.png";
+import Micro from "./path0.webp";
 
 const StyledThree = styled.article`
   @media only screen and (max-width: 920px) {

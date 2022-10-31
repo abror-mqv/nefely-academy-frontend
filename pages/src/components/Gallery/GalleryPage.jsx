@@ -131,7 +131,7 @@ function GalleryPage() {
                   className="post__picture"
                   loader={() => src}
                   src={src}
-                  alt="Picture of the author"
+                  alt={el.attributes.Title}
                   width={2000}
                   height={2000}
                 />

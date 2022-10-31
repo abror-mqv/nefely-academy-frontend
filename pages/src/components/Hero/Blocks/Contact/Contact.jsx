@@ -298,7 +298,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <img src="/media/phone1.png" className="PhoneImg" alt="Средняя зарпалта мастера по ремонту телефонов" />
+      <img src="/media/phone1.webp" className="PhoneImg" alt="Средняя зарпалта мастера по ремонту телефонов" />
     </StyledContact>
   );
 }
