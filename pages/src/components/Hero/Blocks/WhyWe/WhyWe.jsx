@@ -136,7 +136,7 @@ function WhyWe() {
           Почему &nbsp;<span>мы?</span>
         </h5>
         <div className="Container">
-          <a href="https://www.pinterest.com/" className="Gallery">
+          <a href="./gallery" className="Gallery">
             Галерея
           </a>
           <Swiper

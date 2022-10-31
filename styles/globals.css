@@ -11,14 +11,14 @@ body {
   margin: 0;
   font-family: "Jura", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 body {
-  background-image: url("/media/foto_platy.png");
+  background-image: url("/media/back.png");
 }
 @media only screen and (max-width: 920px) {
   body {
     background-image: url("/media/foto_platy.png");
-    overflow: hidden !important;
   }
   .swiper-pagination {
     display: none !important;

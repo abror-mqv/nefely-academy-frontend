@@ -1,9 +1,7 @@
 import React from "react";
-
 import styled from "styled-components";
-
+import Image from "next/image";
 import Join from "./add-friend.png";
-
 import Price from "./Price.svg";
 
 const StyledCard = styled.div`
@@ -11,22 +9,20 @@ const StyledCard = styled.div`
     transition: 0.2s;
   }
   @media only screen and (max-width: 920px) {
-    &{
+    & {
       height: 70vh;
       width: 100%;
-      .header{
-        *{
+      .header {
+        * {
           display: block;
         }
       }
-      .Card{
+      .Card {
         width: 90% !important;
         height: 60vh !important;
         box-shadow: none !important;
-
       }
     }
-    
   }
   text-align: center;
   height: 56vh;
@@ -56,9 +52,7 @@ const StyledCard = styled.div`
 
   .Card {
     .Image {
-      width: 100%;
-      height: 40%;
-      background-image: url("/media/CoursePicture.png");
+      width: 100%;      
     }
     transition: 0.2s;
     background: linear-gradient(
@@ -68,7 +62,7 @@ const StyledCard = styled.div`
     );
     box-shadow: 6px 6px 12px #000000,
       -3px -3px 14px -3px rgba(255, 255, 255, 0.66);
-    height: 80%;
+    max-height: 100% !important;
     width: 60%;
     border-radius: 6px;
 
@@ -83,7 +77,8 @@ const StyledCard = styled.div`
       font-size: 90%;
       line-height: 17px;
       text-align: center;
-      height: 34%;
+      height: 26% !important;
+      /* margin-top: -10%; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -143,8 +138,8 @@ const StyledCard = styled.div`
   }
 `;
 function Card(props) {
-  const GoSlide = props.isc
-
+  const GoSlide = props.isc;
+  const src = `http://176.126.166.222:1337${props.picture}`;
   return (
     <StyledCard>
       <div className="header">
@@ -152,16 +147,27 @@ function Card(props) {
         <h3 className="YellowH">{props.primary_name}</h3>
       </div>
       <div className="Card">
-        <div className="Image" style={{
-          backgroundImage: `url('http://176.126.166.222:1337${props.picture}')`
-        }}></div>
+        <Image
+          className="Image"
+          loader={() => src}
+          src={src}
+          alt="Picture of the author"
+          width={200}
+          height={150}
+        />
         <p className="CardParag">{props.description}</p>
         <div className="Price">
           {/* <SlideButton/> */}
-          <div onClick={() => {
-              GoSlide(true)
-          }}>
-            Записаться <img src={Join.src} alt="Записаться на курсы по ремонту телеофнов" />
+          <div
+            onClick={() => {
+              GoSlide(true);
+            }}
+          >
+            Записаться{" "}
+            <img
+              src={Join.src}
+              alt="Записаться на курсы по ремонту телеофнов"
+            />
           </div>
         </div>
       </div>

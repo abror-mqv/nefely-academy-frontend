@@ -144,6 +144,10 @@ function Footer() {
           <p className="footer__link">
             <Link href="/privacy">Условия пользования</Link>
           </p>
+
+          <p className="footer__link">
+            <Link href="/gallery">Галлерея</Link>
+          </p>
           <p className="footer__years">© ООО &quot СМАРТ АКАДЕМИЯ &quot, 2022</p>
         </div>
         <div className="right-panel">
