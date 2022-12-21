@@ -39,6 +39,7 @@ export default function Home() {
         />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Index />
     </div>

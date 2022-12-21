@@ -36,7 +36,7 @@ const HomeStyle = styled.article`
       width: 90vw !important;
       margin-left: 0 !important;
       margin-top: 2vh !important;
-      background: rgb(200 200 200 / 36%) !important;
+      background: rgb(200 200 200 / 26%) !important;
       /* box-shadow: -8px -8px 37px -15px #ffffff, 25px 25px 50px -9px #000000 !important; */
       box-shadow: none !important;
       height: 75vh !important;
@@ -128,6 +128,9 @@ const HomeStyle = styled.article`
       padding: 4vh 0;
       width: 44vw;
       margin-left: 8%;
+    
+      backdrop-filter: blur(7px);
+      background-blend-mode: overlay;
       h1 {
         font-family: "Days One";
         font-style: normal;
@@ -251,7 +254,11 @@ function HomePage() {
           <SlideNextButton />
         </div>
       </div>
-      <img className="Plate" src="/media/phone1.webp" alt="Курсы ремонта телеофнов" />
+      <img
+        className="Plate"
+        src="/media/phone1.webp"
+        alt="Курсы ремонта телеофнов"
+      />
     </HomeStyle>
   );
 }

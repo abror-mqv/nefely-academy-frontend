@@ -24,6 +24,12 @@ const Main = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
   .HeaderLine {
     max-height: 5vh !important;
+    backdrop-filter: blur(7px);
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.1% !important;
   }
   width: 82vw;
   height: 78vh;
@@ -73,6 +79,7 @@ const Main = styled.div`
     .swiper-wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
 
       .swiper-slide {
@@ -140,7 +147,7 @@ function Hero() {
       className={currentSlide != 4 ? "WhiteLink" : "YellowLink"}
       key={5}
     >
-      <p>Где мы?</p> 
+      <p>Где мы?</p>
     </SwiperSlide>,
   ];
   return (

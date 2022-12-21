@@ -61,6 +61,7 @@ const WhyWeStyled = styled.article`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     h5 {
       font-family: "Days One";
       font-style: normal;
@@ -79,6 +80,8 @@ const WhyWeStyled = styled.article`
       display: flex;
       justify-content: center;
       width: 80vh;
+      backdrop-filter: blur(7px);
+    background-blend-mode: overlay;
       .Gallery {
         width: 44vh;
         background: linear-gradient(273.39deg, #d3fc00 25.58%, #fcf200 103.48%);

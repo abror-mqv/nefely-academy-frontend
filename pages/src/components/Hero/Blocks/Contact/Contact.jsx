@@ -35,6 +35,7 @@ const StyledContact = styled.div`
         display: flex !important;
         /* justify-content: center !important;
         align-items: center !important; */
+        
         .Write {
           display: flex;
           justify-content: center;
@@ -91,6 +92,8 @@ const StyledContact = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(7px);
+    background-blend-mode: overlay;
     .Container {
       display: flex;
       justify-content: flex-start;
